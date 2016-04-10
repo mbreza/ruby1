@@ -1,19 +1,27 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Student -%>
+<div class="page-header">
+  <h1><%=t '.title', default: model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @student.FirstName %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:FirstName) %></dt>
+      <dd><pre class="prettyprint"><%= @student.FirstName %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:LastName) %></dt>
+      <dd><pre class="prettyprint"><%= @student.LastName %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:Index) %></dt>
+      <dd><pre class="prettyprint"><%= @student.Index %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @student.LastName %>
-</p>
-
-<p>
-  <strong>Index:</strong>
-  <%= @student.Index %>
-</p>
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<div class="form-group">
+  <%= link_to t('.back', default: t("helpers.links.back")),
+              students_path, class: 'btn btn-default'  %>
+  <%= link_to t('.edit', default: t("helpers.links.edit")),
+              edit_student_path(@student), class: 'btn btn-default' %>
+  <%= link_to t('.destroy', default: t("helpers.links.destroy")),
+              student_path(@student),
+              method: 'delete',
+              data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) },
+              class: 'btn btn-danger' %>
+</div>

@@ -1,32 +1,28 @@
-<%= form_for(student) do |f| %>
-  <% if student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
-
-      <ul>
-      <% student.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @student, html: { class: 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :FirstName, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :FirstName, class: 'text_field form-control' %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :FirstName %>
-    <%= f.text_field :FirstName %>
+  </div>
+  <div class="form-group">
+    <%= f.label :LastName, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :LastName, class: 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :Index, class: 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :Index, class: 'text_field form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :LastName %>
-    <%= f.text_field :LastName %>
-  </div>
-
-  <div class="field">
-    <%= f.label :Index %>
-    <%= f.text_field :Index %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, class: 'btn btn-primary' %>
+      <%= link_to t('.cancel', default: t("helpers.links.cancel")),
+                  students_path, class: 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
