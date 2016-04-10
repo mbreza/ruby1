@@ -1,0 +1,19 @@
+current directory: /home/mbreza/ruby1/StudentList/vendor/bundle/ruby/2.3.0/gems/byebug-8.2.4/ext/byebug
+/home/mbreza/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20160410-19087-zh7uqn.rb extconf.rb
+creating Makefile
+
+current directory: /home/mbreza/ruby1/StudentList/vendor/bundle/ruby/2.3.0/gems/byebug-8.2.4/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/mbreza/ruby1/StudentList/vendor/bundle/ruby/2.3.0/gems/byebug-8.2.4/ext/byebug
+make "DESTDIR="
+compiling byebug.c
+compiling breakpoint.c
+compiling locker.c
+compiling threads.c
+compiling context.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/mbreza/ruby1/StudentList/vendor/bundle/ruby/2.3.0/gems/byebug-8.2.4/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -m 0755 byebug.so ./.gem.20160410-19087-k1f441/byebug
