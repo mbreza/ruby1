@@ -1,2 +1,0 @@
-class ListOfStudent < ApplicationRecord
-end

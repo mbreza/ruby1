@@ -1,5 +1,5 @@
 current directory: /home/mbreza/ruby1/StudentList/vendor/bundle/ruby/2.3.0/gems/nio4r-1.2.1/ext/nio4r
-/home/mbreza/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20160410-19087-vyu3ex.rb extconf.rb
+/home/mbreza/.rvm/rubies/ruby-2.3.0/bin/ruby -r ./siteconf20160410-25872-cizjhu.rb extconf.rb
 checking for unistd.h... yes
 checking for rb_thread_blocking_region()... no
 checking for rb_thread_call_without_gvl()... yes
@@ -402,4 +402,4 @@ linking shared-object nio4r_ext.so
 
 current directory: /home/mbreza/ruby1/StudentList/vendor/bundle/ruby/2.3.0/gems/nio4r-1.2.1/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -m 0755 nio4r_ext.so ./.gem.20160410-19087-19g9ipr
+/usr/bin/install -m 0755 nio4r_ext.so ./.gem.20160410-25872-pbcnh7
