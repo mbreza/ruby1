@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+500.times { Student.create(:FirstName => Faker::Hipster.word, :LastName => Faker::Hipster.word, :Index => Faker::Number.number(8)) }

@@ -1,10 +1,12 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
+  http_basic_authenticate_with name: "admin", password: "admin", except: :index
   # GET /students
   # GET /students.json
   def index
-    @students = Student.all
+    #@students = Student.all
+    @student = Student.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /students/1
